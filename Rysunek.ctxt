@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Rysunek()
+comment1.params=myszX\ myszY
+comment1.target=void\ rysuj(int,\ int)
+numComments=2
