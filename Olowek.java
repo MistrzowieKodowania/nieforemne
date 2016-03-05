@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class Pencil extends Actor
+public class Olowek extends Actor
 {
 
     

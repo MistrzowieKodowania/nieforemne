@@ -3,10 +3,10 @@ import java.awt.Color;
 
 public class Ground extends World
 {
-    Pencil pencil=new Pencil();
+    Olowek pencil=new Olowek();
     MouseInfo myszKomp;
     int mx, my, startX, startY;
-    int n=0;
+    int ileKlikniec=0;
     Rysunek rys = new Rysunek();
     
     public Ground()
@@ -29,8 +29,8 @@ public class Ground extends World
        getBackground().drawLine(startX,startY,mx,my);
        pencil.setLocation(mx,my);
        rys.rysuj(mx,my);
-       n++;
-       if(n==3) showText("", 300, 50);  
+       ileKlikniec++;
+       if(ileKlikniec==3) showText("", 300, 50);  
        }
        
     }

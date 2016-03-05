@@ -3,33 +3,29 @@ import java.awt.Color;
 
 public class Rysunek extends Actor
 {
-    int startX, startY, endX, endY, ile;
-    MouseInfo myszKomp;
-    int mx;
-    int my;
+    GreenfootImage rys;
     int[] xWiel = new int[1000];
     int[] yWiel = new int[1000];
-    GreenfootImage rys;
-    int k = 0;
+    int ileWierzcholkow = 0;
     public Rysunek()
     {    
         xWiel[0]=300;
         yWiel[0]=100;
+        ileWierzcholkow++;
         setImage(new GreenfootImage(600,400));
         rys = getImage();
-    
+        rys.setColor(Color.RED);
     }
     
     public void rysuj(int myszX, int myszY){
-        k++;
-        xWiel[k]=myszX;
-        yWiel[k]=myszY;
-        
-       if(k>=2){
-        rys.setColor(Color.RED);
+        xWiel[ileWierzcholkow]=myszX;
+        yWiel[ileWierzcholkow]=myszY;
+        ileWierzcholkow++;
+       if(ileWierzcholkow>=3){
         rys.clear();
-        rys.fillPolygon(xWiel, yWiel, k+1);
+        rys.fillPolygon(xWiel, yWiel, ileWierzcholkow);
         
         }
+        
     }
 }
